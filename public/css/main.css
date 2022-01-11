@@ -15,6 +15,18 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .pl-150 {
 	padding-left: 150px;
 }
@@ -426,3 +438,14 @@ body {
 	height: 42px;
 }
 /*# sourceMappingURL=main.css.map */
+
+.image-checkout {
+	width: 100%;
+}
+
+@media (min-width: 48rem) {
+	.image-checkout {
+		height: 23rem;
+		width: auto;
+	}
+}

@@ -25,10 +25,10 @@
 				<div class="d-flex user-logged nav-item dropdown no-arrow">
 					<a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
 						Halo, {{ Auth::user()->name }}!
-						<img src="{{ Auth::user()->avatar }}" class="user-photo rounded-circle" alt="">
+						<img src="{{ Auth::user()->avatar }}" referrerPolicy="no-referrer" class="user-photo rounded-circle" alt="">
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right: 0; left: auto; margin-top: 1rem; border-radius: 1rem">
 							<li>
-								<a href="#" class="dropdown-item py-3">Dashboard</a>
+								<a href="{{ route('dashboard') }}" class="dropdown-item py-3">Dashboard</a>
 							</li>
 							<li>
 								<a href="#" class="dropdown-item py-3" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
