@@ -25,7 +25,11 @@
 				<div class="d-flex user-logged nav-item dropdown no-arrow">
 					<a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
 						Halo, {{ Auth::user()->name }}!
+                        @if (Auth::user()->avatar)
 						<img src="{{ Auth::user()->avatar }}" referrerPolicy="no-referrer" class="user-photo rounded-circle" alt="">
+                        @else
+						<img src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}" referrerPolicy="no-referrer" class="user-photo rounded-circle" alt="">
+                        @endif
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right: 0; left: auto; margin-top: 1rem; border-radius: 1rem">
 							<li>
 								<a href="{{ route('dashboard') }}" class="dropdown-item py-3">Dashboard</a>

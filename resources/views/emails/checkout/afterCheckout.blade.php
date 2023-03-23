@@ -3,10 +3,10 @@
 
 Hi, {{ $checkout->user->name }}.
 <br>
-Thank you for register on {{ $checkout->camp->title }}. Please see payment instructions by click the button below:
+Thank you for register on {{ $checkout->camp->title }}. To see your registered classes check on:
 
-@component('mail::button', ['url' => route('user.checkout.invoice', $checkout->id)])
-Get Invoice
+@component('mail::button', ['url' => route('dashboard')])
+My Dashboard
 @endcomponent
 
 Thanks,<br>

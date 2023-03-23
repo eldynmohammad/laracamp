@@ -20,10 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-// Route::get('/checkout/{camp:slug}', function () {
-//     return view('checkout');
-// })->name('checkout');
-
 // Socialite routes
 Route::get('sign-in-google', [UserController::class, 'google'])->name('user.login.google');
 Route::get('auth/google/callback', [UserController::class, 'handleProviderCallback'])->name('user.google.callback');
@@ -36,7 +32,7 @@ Route::middleware('auth')->group(function() {
 
 	// Dashboard route
 	Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
-    Route::get('dashboard/checkout/invoice/{checkout}', [CheckoutController::class, 'invoice'])->name('user.checkout.invoice');
+    // Route::get('dashboard/checkout/invoice/{checkout}', [CheckoutController::class, 'invoice'])->name('user.checkout.invoice');
 });
 
 // Route::get('/dashboard', function () {
